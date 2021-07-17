@@ -62,7 +62,7 @@ let generator = generateSequence();
 let one = generator.next();
 */!*
 
-alert(JSON.stringify(one)); // {value: 1, done: false}
+alert(JSON.stringify(one)); // {value: 1, done: false} должно быть {"value":1,"done":false}
 ```
 
 На данный момент мы получили только первое значение, выполнение функции остановлено на второй строке:
@@ -74,7 +74,7 @@ alert(JSON.stringify(one)); // {value: 1, done: false}
 ```js
 let two = generator.next();
 
-alert(JSON.stringify(two)); // {value: 2, done: false}
+alert(JSON.stringify(two)); // {value: 2, done: false} должно быть {"value":2,"done":false}
 ```
 
 ![](generateSequence-3.svg)
@@ -84,7 +84,7 @@ alert(JSON.stringify(two)); // {value: 2, done: false}
 ```js
 let three = generator.next();
 
-alert(JSON.stringify(three)); // {value: 3, *!*done: true*/!*}
+alert(JSON.stringify(three)); // {value: 3, *!*done: true*/!*} должно быть {"value":3,"done":false}
 ```
 
 ![](generateSequence-4.svg)
